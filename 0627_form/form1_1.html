@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="0">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인양식연습</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <hr>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>로그인양식</legend>
+            <ul>
+                <li><input type="text" name="user_id" placeholder="아이디"></li>
+                <li><input type="password" name="user_pw" placeholder="비밀번호"></li>
+                <li>
+                    성별:
+                    <label>남
+                        <input type="radio" name="gender" value="male" id="male">
+                    </label>
+                    <label>여
+                        <input type="radio" name="gender" value="female" id="female">
+                    </label>
+                </li>
+                <li>
+                    정보 저장 동의:
+                    <label for="agree">동의함</label>
+                    <input type="radio" name="agree_g" value="agree" id="agree">
+                    <label for="diagree">동의안함</label>
+                    <input type="radio" name="agree_g" value="diagree" id="diagree">
+                </li>
+                <li>
+                    관심사(2개 이상 선택하세요)
+                    <label for="movie">영화</label>
+                    <input type="checkbox" name="hobby" value="movie" id="movie">
+                    <label for="sports">운동</label>
+                    <input type="checkbox" name="hobby" value="sports" id="sports">
+                    <label for="book">독서</label>
+                    <input type="checkbox" name="book" value="book" id="book">
+                </li>
+                <li>
+                    첨부파일<input type="file">
+                </li>
+            </ul>
+            <p>
+                <button type="submit">가입</button>
+                <button type="reset">가입취소</button>
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
