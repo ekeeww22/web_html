@@ -1,0 +1,3 @@
+white-space:nowrap; /* 줄바꿈 안됨 */
+overflow:hidden; /* 넘치는 영역만큼 숨겨짐 */
+text-overflow:ellipsis; /* 넘친영역 말줄임(...)처리 */

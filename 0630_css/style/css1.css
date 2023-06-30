@@ -1,0 +1,67 @@
+/* 로컬글꼴 연결법 */
+/* 
+1. C → windows → Font 폴더에서 원하는 글꼴 복사
+2. 웹 작업폴더로 글꼴 붙여넣기 (fonts폴더 생성)
+3. 글꼴명 올바르게 구성하기(한글x 특수문자x 공백x)
+4. otf일 경우 ttf로 변환(선택)
+5. font-face 글꼴 구성
+6. font-family 글꼴 적용하기 */
+/* 웹글꼴 연결법 */
+/* 구글폰트접속 -> 글꼴선택 -> link or import 글꼴 주소 가져오기 -> font-family글꼴연결 */
+dl {
+    font-size:2rem; /* 32px */
+    font-size:3rem;
+}
+dl dt {
+    font-size:1.5rem;
+    font-family:'안성탕면굵게';
+    background-color:rgba(0,255,255,0.7);
+    color:rgba(0,0,0,0.5);
+}
+dl dt em {
+    display:none;
+    font-family: 'Jua', sans-serif;
+    background-color:#000; color:#fff;
+}
+dl dd {
+    font-family: 'Gugi', cursive;
+    background-color:gold;
+}
+dl dd span {
+    display:block;
+    font-family:'가나초콜릿_메인';
+    background-color:#000; color:#fff;
+}
+.f12 {
+    display:inline;
+    background-color:lightcoral;
+    word-spacing:0.05em;
+    letter-spacing:-0.02em;
+    font-size:1.25rem;/* 20px */
+    line-height:1.5;
+    /* font-size의 px값 기준 설정이 불편할 경우 상태값 기준으로 line-height을 처리한다.(100%기준) */
+    /* line-height:30px; */
+    /* line-height를 px로 작성할 경우는 font-size의 px값 기준으로 값이 결정된다. */
+}
+.overflow {
+    background-color:rgba(0,0,0,0.2);
+    font-size:1.25rem;
+    width:400px;
+    white-space:nowrap; /* 줄바꿈 안됨 */
+    overflow:hidden; /* 넘치는 영역만큼 숨겨짐 */
+    text-overflow:ellipsis; /* 넘친영역 말줄임(...)처리 */
+}
+#a {
+    background-color:palegreen;
+    width:500px; height:500px;
+    margin-left:50px;
+    padding-top:20px;
+}
+#a #b {
+    margin:0 10px 0;
+    border:5px solid coral;
+    font-size:5rem;
+    background-color:mediumpurple;
+    width:50%; height:300px;
+    /* 자식요소의 크기를 입력시에는 반드시 부모 요소보다 작거나 같아야 한다. */
+}
