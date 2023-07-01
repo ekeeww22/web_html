@@ -1,0 +1,53 @@
+/* header */
+header {background-color:antiquewhite;}
+header h1 {}
+header h1 a {}
+header h1 a img {}
+/* header-nav */
+header nav {background-color:aquamarine;}
+header nav ul {}
+header nav ul li {}
+header nav ul li a {}
+header .lnb {background-color:gold;}
+header .lnb li {}
+header .lnb li a {}
+/* main */
+main {background-color:cadetblue;}
+main .breadcrumbs_bg {background-color:#f1f1f1;}
+main .breadcrumbs_bg .breadcrumbs {}
+main .breadcrumbs_bg .breadcrumbs a {}
+main .breadcrumbs_bg .breadcrumbs em {}
+/* main-contents1 */
+main .contents1 {background-color:darkviolet;}
+main .contents1 h1 {}
+main .contents1 p {}
+/* main-contents2 */
+main .c2_bg {background-color:#f1f1f1;}
+main .c2_bg .contents2 {background-color:darksalmon;}
+main .c2_bg .contents2 p {}
+/* main-contents3 */
+main .contents3 {background-color:darkkhaki;}
+main .contents3 h2 {}
+main .contents3 h2+p {}
+/* main-contents4 */
+main .c4_bg {background-color:#f1f1f1;}
+main .c4_bg .contents4 {}
+main .c4_bg .contents4 h2 {}
+main .c4_bg .contents4 .goal {}
+main .c4_bg .contents4 .goal li {}
+main .c4_bg .contents4 .strategy {}
+main .c4_bg .contents4 .strategy li {}
+main .c4_bg .contents4 .strategy li h3 {}
+main .c4_bg .contents4 .strategy li p {}
+/* footer */
+footer {background-color:hotpink;}
+footer .f_top {background-color:green;}
+footer .f_top .fnb {background-color:moccasin;}
+footer .f_top .fnb li {}
+footer .f_top .fnb li a {}
+footer .f_top .site {background-color:tomato;}
+footer .f_top .site li {}
+footer .f_top .site li a {}
+footer .f_btm {background-color:yellowgreen;}
+footer .f_btm address {}
+footer .f_btm p {}
