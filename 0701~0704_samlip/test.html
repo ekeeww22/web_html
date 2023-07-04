@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        /* #a {color:green;} */
+        /* CSS 우선순위 순서(class, id, tag, inline), 동일한 순위일 경우 무엇을 기준으로 순위가 정해지는가?*/
+        /* inline->id->class->tag 순 */
+        /* 우선순위가 같을 경우 나중에 선언된 것이 적용된다. */
+        .b {color:red;}
+        h1 {color:pink;}
+        .c {color:yellow;}
+
+        article {
+            /* layout css - 크기, 정렬 (+여백) */
+            width:543px;
+            background-color:#d9d9d9;
+            margin:0 auto;
+        }
+        article h1 {}
+        article p {}
+        /* float연습 */
+        /* 조건 1. 같은 부모 안 형제 요소가 2개 일 때  */
+        /* 조건 2. (위)형제 요소 2개 이상을 좌우 배치할 때 */
+        * {margin:0; padding:0; box-sizing:border-box;}
+        #define {
+            background-color:lime;
+            width:543px;
+            margin:50px auto 0;
+            /* overflow:hidden; */
+        }/* 부모 */
+        #define::after {clear:both; display:block; content:'';}
+        #define dt {float:left; width:49%;}/* 형제1 */
+        #define dd {float:right; width:49%;}/* 형제2 */
+        #define dt:nth-child(1) {background-color:blueviolet;}
+        #define dt:nth-child(3) {background-color:crimson;}
+        #define dd:nth-child(2) {background-color:deepskyblue;}
+        #define dd:nth-child(4) {background-color:orange;}
+        /* float 부유특징에 따른 문제해결
+        부모요소의 H값이 없으면 부모는 자식만큼 크기를 인식한다.
+        그러나 자식이 float를 가지면 부모에서 벗어나는 특징때문에 부모가 자식만큼의 크기를 못가지고 H 0이 되는 문제가 발생한다.
+        해결방법
+        1. 가출한 float 자식 잡기
+        - 부모요소에 overflow:hidden 명령 (영역재인식)
+        1. 부모요소에 가상요소 삽입
+        - 부모::after {clear:both; content:’’; display:block;}
+        1. 강제높이설정 (추천 X)
+        - 부모요소에 강제 높이값 설정 height:; */
+        figure {
+            background-color:aqua;
+            width:543px; margin:0 auto;
+            overflow:hidden;
+        }
+        figure img {width:150px; float:left}
+        figure figcaption {float:right}
+        footer {
+            width:700px; margin:0 auto;
+            background-color:yellow;
+            text-align:right;
+        }
+        footer span {
+            text-align:center; line-height:100px;
+            display:inline-block; margin-left:-6px;
+            width:100px; height:100px;
+            border-radius:50%;
+            /* display:inline-block; 특징
+            1. inline특징으로 옆으로 정렬된다. ( **-> 사이에 여백이 들어감 여백을 빼려면 margin-left:- px; -값 적용** )
+            2. block특징으로 크기와 여백을 가진다.
+            3. inline과 block에 들어가는 css를 거의 모두 가질 수 있다. */
+        }
+        footer span:nth-child(1) {background-color:red;}
+        footer span:nth-child(2) {background-color:green;}
+        footer span:nth-child(3) {background-color:blue;}
+        footer span:nth-child(4) {background-color:hotpink;}
+    </style>
+</head>
+<body>
+    <h1 class="b c" id="a">제목</h1>
+    <article><!-- 뉴스, 블로그 페이지 내 독립영역 틀 -->
+        <h1>제목</h1>
+        <p>내용</p>
+    </article>
+    <dl id="define">
+        <dt>제목1</dt>
+        <dd>내용1</dd>
+        <dt>제목2</dt>
+        <dd>내용2</dd>
+    </dl>
+    <figure>
+        <img src="./image/spc-samlip-logo-new.png" alt="">
+        <figcaption>삼립 로고 이미지</figcaption>
+    </figure>
+    <footer>
+        <span>span1</span>
+        <span>span2</span>
+        <span>span3</span>
+        <span>span4</span>
+    </footer>
+</body>
+</html>
